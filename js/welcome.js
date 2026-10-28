@@ -64,7 +64,7 @@
       kPaste: 'Paste a screenshot into a note',
       keysTip: 'You can change the shortcuts on this Chrome page:',
       tipsTitle: 'Good to know',
-      tipSpell: 'Spelling is checked automatically in English and Russian. Mistakes get a red wavy underline, like in Word; right-click a word to see suggestions.',
+      tipSpell: 'Spelling is checked automatically in English, Spanish, French and German (and Russian). Mistakes get a red wavy underline, like in Word; right-click a word to see suggestions.',
       tipDesktop: 'Chrome doesn’t allow extensions to add an icon to your desktop or taskbar. To create a note quickly from anywhere, press {anywhere}. It works even in Word or Excel while Chrome is running.',
       toast: 'Done! The icon is on your toolbar.',
       sNewTab: 'Google', sSearch: 'Search Google or type a URL', sExt: 'Extensions', sFull: 'Full access',
@@ -76,47 +76,6 @@
       altType: 'A note with a shopping list',
       altTop: 'The Always on top button with its tooltip',
       altFind: 'All notes with search',
-    },
-    ru: {
-      docTitle: 'Desktop Sticky Notes установлено',
-      installed: 'Desktop Sticky Notes установлено',
-      thankYou: 'Спасибо!',
-      pinLead: 'Нажмите значок пазла (1) в правом верхнем углу браузера. Затем нажмите маленькую булавку (2) рядом с расширением:',
-      liveHint: 'Страница обновится сама, как только вы закрепите значок.',
-      toUsageQ: 'Уже закрепили?', toUsage: 'Пропустить этот шаг',
-      pinnedLine: 'Desktop Sticky Notes уже закреплено на панели.',
-      toPinQ: 'Не видите значок на панели?', toPin: 'Показать, как его закрепить',
-      openLead: 'Откройте расширение (3), чтобы начать пользоваться Desktop Sticky Notes:',
-      newLead: 'Нажмите <b>+ Новая заметка</b> (4). Новая заметка откроется в отдельном окне:',
-      firstNote: 'Создать первую заметку',
-      pressToCreate: 'Или нажмите {newNote}, чтобы создать заметку.',
-      typeH: 'Просто пишите',
-      typeB: 'Кнопки «Сохранить» нет: всё сохраняется автоматически. Первая строка становится заголовком.',
-      topH: 'Держите заметку поверх окон',
-      topB: 'Нажмите <b>Поверх всех окон</b>, и заметка останется над Word, Excel и любыми другими программами.',
-      findH: 'Находите любую заметку',
-      findB: 'Откройте <b>Все заметки и папки</b>: там поиск, сортировка и папки для заметок.',
-      keysTitle: 'Горячие клавиши на этом компьютере',
-      kNew: 'Новая заметка (когда открыт Chrome)',
-      kAny: 'Новая заметка из любой программы (Chrome должен быть запущен)',
-      kMenu: 'Открыть меню расширения',
-      kSearch: 'Поиск внутри заметки',
-      kSub: 'Подпункт списка / следующая ячейка таблицы',
-      kPaste: 'Вставить скриншот в заметку',
-      keysTip: 'Клавиши можно изменить на этой странице Chrome:',
-      tipsTitle: 'Полезно знать',
-      tipSpell: 'Орфография проверяется сама, на русском и английском: ошибки подчёркиваются красной волнистой линией, как в Word, а правый клик по слову показывает варианты.',
-      tipDesktop: 'Chrome не разрешает расширениям ставить значок на рабочий стол или на панель задач. Чтобы быстро создать заметку откуда угодно, нажмите {anywhere}. Это работает даже в Word или Excel, пока Chrome запущен.',
-      toast: 'Готово! Значок на панели.',
-      sNewTab: 'Google', sSearch: 'Найдите в Google или введите URL', sExt: 'Расширения', sFull: 'Полный доступ',
-      picNote: 'Это картинка браузера <b>Google Chrome</b>. Красные кружки только показывают, куда нажимать: это не кнопки. Нажимайте настоящие кнопки на <b>панели своего браузера</b>, в правом верхнем углу этого окна ↗',
-      sOther: 'Другое расширение', sManage: 'Управление расширениями', sNewNote: 'Новая заметка',
-      altPin: 'Меню расширений Chrome с кнопкой-булавкой рядом с Desktop Sticky Notes',
-      altOpen: 'Меню Desktop Sticky Notes, открытое с панели',
-      altNote: 'Новая пустая заметка в отдельном окне',
-      altType: 'Заметка со списком покупок',
-      altTop: 'Кнопка «Поверх всех окон» с подсказкой',
-      altFind: 'Все заметки и поиск',
     },
     es: {
       docTitle: 'Desktop Sticky Notes instalado',
@@ -146,7 +105,7 @@
       kPaste: 'Pegar una captura de pantalla en una nota',
       keysTip: 'Puedes cambiar los atajos en esta página de Chrome:',
       tipsTitle: 'Conviene saber',
-      tipSpell: 'La ortografía en inglés y ruso se revisa automáticamente: los errores se subrayan con una línea roja ondulada, como en Word, y con clic derecho ves sugerencias.',
+      tipSpell: 'La ortografía se revisa automáticamente en español, inglés, francés y alemán (y ruso): los errores se subrayan con una línea roja ondulada, como en Word, y con clic derecho ves sugerencias.',
       tipDesktop: 'Chrome no permite a las extensiones poner un icono en el escritorio ni en la barra de tareas. Para crear una nota rápidamente desde cualquier sitio, pulsa {anywhere}. Funciona incluso en Word o Excel mientras Chrome está abierto.',
       toast: '¡Listo! El icono está en tu barra.',
       sNewTab: 'Google', sSearch: 'Busca con Google o escribe una URL', sExt: 'Extensiones', sFull: 'Acceso completo',
@@ -187,7 +146,7 @@
       kPaste: 'Coller une capture d’écran dans une note',
       keysTip: 'Vous pouvez modifier les raccourcis sur cette page de Chrome :',
       tipsTitle: 'Bon à savoir',
-      tipSpell: 'L’orthographe en anglais et en russe est vérifiée automatiquement : les fautes sont soulignées d’une ligne rouge ondulée, comme dans Word, et un clic droit propose des corrections.',
+      tipSpell: 'L’orthographe est vérifiée automatiquement en français, anglais, espagnol et allemand (et russe) : les fautes sont soulignées d’une ligne rouge ondulée, comme dans Word, et un clic droit propose des corrections.',
       tipDesktop: 'Chrome ne permet pas aux extensions d’ajouter une icône sur le bureau ou dans la barre des tâches. Pour créer une note rapidement depuis n’importe où, appuyez sur {anywhere}. Cela marche même dans Word ou Excel tant que Chrome est ouvert.',
       toast: 'C’est fait ! L’icône est dans votre barre.',
       sNewTab: 'Google', sSearch: 'Rechercher sur Google ou saisir une URL', sExt: 'Extensions', sFull: 'Accès complet',
@@ -228,7 +187,7 @@
       kPaste: 'Screenshot in eine Notiz einfügen',
       keysTip: 'Die Tastenkürzel kannst du auf dieser Chrome-Seite ändern:',
       tipsTitle: 'Gut zu wissen',
-      tipSpell: 'Die Rechtschreibung auf Englisch und Russisch wird automatisch geprüft: Fehler bekommen eine rote Wellenlinie wie in Word, und ein Rechtsklick zeigt Vorschläge.',
+      tipSpell: 'Die Rechtschreibung wird automatisch auf Deutsch, Englisch, Spanisch und Französisch (und Russisch) geprüft: Fehler bekommen eine rote Wellenlinie wie in Word, und ein Rechtsklick zeigt Vorschläge.',
       tipDesktop: 'Chrome erlaubt Erweiterungen nicht, ein Symbol auf den Desktop oder in die Taskleiste zu legen. Um schnell von überall eine Notiz zu erstellen, drücke {anywhere}. Das funktioniert sogar in Word oder Excel, solange Chrome läuft.',
       toast: 'Fertig! Das Symbol ist in deiner Leiste.',
       sNewTab: 'Google', sSearch: 'Google durchsuchen oder URL eingeben', sExt: 'Erweiterungen', sFull: 'Vollzugriff',
@@ -242,10 +201,11 @@
       altFind: 'Alle Notizen mit der Suche',
     },
   };
-  var LANGS = ['en', 'ru', 'es', 'fr', 'de'];
+  // Russian is not offered on the Welcome page (build 18): a Russian browser gets the English page
+  var LANGS = ['en', 'es', 'fr', 'de'];
   // Pictures of the real extension: the menu and the list are made for every language,
   // the note windows in English and Russian (the other languages use the English ones).
-  var SHOT_LANGS = { popup: LANGS, library: LANGS, note: ['en', 'ru'], ontop: ['en', 'ru'], 'note-empty': ['en', 'ru'] };
+  var SHOT_LANGS = { popup: LANGS, library: LANGS, note: ['en'], ontop: ['en'], 'note-empty': ['en'] };
 
   // Default shortcuts (the same as in manifest.json). The extension sends the real ones if it is reachable.
   var shortcuts = { newNote: 'Alt+Shift+N', newNoteAnywhere: 'Ctrl+Shift+9', openMenu: 'Alt+Shift+S' };
@@ -326,7 +286,7 @@
   var FONT = 'font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"';
   var MARK = '#D93025';
   var ICON32 = 'icons/icon32.png';
-  var shotBase = function (k) { var l = (SHOT_LANGS[k] || ['en', 'ru']).indexOf(lang) >= 0 ? lang : 'en'; return 'images/welcome/' + l + '/'; };
+  var shotBase = function (k) { var l = (SHOT_LANGS[k] || ['en']).indexOf(lang) >= 0 ? lang : 'en'; return 'images/welcome/' + l + '/'; };
 
   // Material "extension" (puzzle) and "push pin" icons, 24x24
   var PUZZLE = 'M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7 1.49 0 2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5c1.38 0 2.5-1.12 2.5-2.5S21.88 11 20.5 11z';
@@ -496,7 +456,6 @@
 
   function browserLang() {
     var nl = (navigator.language || '').toLowerCase();
-    if (/^(ru|uk|be|kk)\b/.test(nl)) return 'ru';
     var two = nl.slice(0, 2);
     return LANGS.indexOf(two) >= 0 ? two : 'en';
   }
