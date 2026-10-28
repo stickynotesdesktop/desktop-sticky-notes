@@ -1,0 +1,151 @@
+/* Shared styles: brand colors from the prototype (navy mascot + pink accent) */
+:root {
+  --navy: #1E4F8C;
+  --navy-dark: #163C6B;
+  --navy-soft: #E7EEF8;
+  --pink: #F06D9B;
+  --pink-soft: #FDE3EC;
+  /* Switches, sliders and "on" buttons: the same dark blue as the "Suggest a feature" button (build 17) */
+  --accent: #1E4F8C;
+  --accent-dark: #163C6B;
+  --accent-soft: #E7EEF8;
+  --accent-track: rgba(30, 79, 140, .22);
+  --star: #FFC21A;
+  --ink: #1F1F24;
+  --ink-2: #4A4A55;
+  --muted: #7A7A86;
+  --line: #E2E2E8;
+  --surface: #FFFFFF;
+  --danger: #D93025;
+  --danger-dark: #B3261E;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(20, 30, 60, .18), 0 2px 6px rgba(20, 30, 60, .10);
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: var(--font-ui); color: var(--ink); background: var(--surface); -webkit-font-smoothing: antialiased; }
+button { font: inherit; color: inherit; cursor: pointer; }
+input, select { font: inherit; color: inherit; }
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; overflow: hidden; }
+
+svg { display: block; flex: none; }
+[data-icon] { display: inline-flex; align-items: center; justify-content: center; }
+
+.icon-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border: 0; border-radius: 8px; background: transparent; color: inherit; padding: 0;
+  transition: background .15s ease;
+}
+.icon-btn:hover { background: rgba(0, 0, 0, .08); }
+.icon-btn.small { width: 24px; height: 24px; }
+.icon-btn.small svg { width: 15px; height: 15px; }
+.icon-btn.active { background: rgba(30, 79, 140, .16); color: var(--navy); }
+
+.primary-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  border: 0; border-radius: 10px; background: var(--navy); color: #fff; padding: 10px 16px; font-weight: 600;
+  transition: background .15s ease, transform .05s ease;
+}
+.primary-btn:hover { background: var(--navy-dark); }
+.primary-btn:active { transform: translateY(1px); }
+.primary-btn:disabled { opacity: .45; cursor: not-allowed; }
+.primary-btn.small { padding: 7px 12px; font-size: 13px; border-radius: 8px; }
+
+.ghost-btn { border: 1px solid var(--line); background: #F4F4F7; color: var(--ink); border-radius: 9px; padding: 8px 16px; font-weight: 500; }
+.ghost-btn:hover { background: #EAEAEF; }
+.danger-btn { border: 0; background: var(--danger); color: #fff; border-radius: 9px; padding: 8px 18px; font-weight: 600; }
+.danger-btn:hover { background: var(--danger-dark); }
+
+/* Popovers & menus */
+.popover {
+  position: absolute; z-index: 50; background: #fff; color: var(--ink);
+  border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); padding: 8px;
+  animation: pop .14s ease-out;
+}
+@keyframes pop { from { opacity: 0; transform: translateY(-4px) scale(.98); } to { opacity: 1; transform: none; } }
+.menu-item {
+  display: flex; align-items: center; gap: 10px; width: 100%; border: 0; background: transparent; text-align: left;
+  padding: 7px 10px; border-radius: 9px; font-size: 13.5px; color: var(--ink);
+}
+.menu-item:hover { background: #F2F4F8; }
+.menu-item svg { width: 17px; height: 17px; color: var(--ink-2); }
+.menu-item.danger, .menu-item.danger svg { color: var(--danger); }
+.menu-item.danger:hover { background: #FDECEA; }
+.menu-sep { height: 1px; background: var(--line); margin: 6px 4px; }
+
+/* Color swatches */
+.swatches { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.swatch {
+  width: 18px; height: 18px; border-radius: 50%; border: 1px solid rgba(0, 0, 0, .18); padding: 0;
+  position: relative; transition: transform .1s ease;
+}
+.swatch:hover { transform: scale(1.15); }
+.swatch.selected { outline: 2px solid var(--navy); outline-offset: 2px; }
+.swatch.add { background: #fff; display: inline-flex; align-items: center; justify-content: center; color: var(--ink-2); }
+.swatch.add svg { width: 12px; height: 12px; }
+
+/* Toggle switch */
+.switch { position: relative; width: 38px; height: 22px; flex: none; }
+.switch input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; z-index: 1; }
+.switch .track { position: absolute; inset: 0; border-radius: 999px; background: #CFCFD8; transition: background .15s; }
+.switch .track::after { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.25); transition: transform .15s; }
+.switch input:checked + .track { background: var(--accent); }
+.switch input:checked + .track::after { transform: translateX(16px); }
+.switch input:focus-visible + .track { outline: 2px solid var(--navy); outline-offset: 2px; }
+
+/* Toasts */
+.toasts { position: fixed; left: 50%; bottom: 52px; transform: translateX(-50%); z-index: 100; display: flex; flex-direction: column; gap: 8px; align-items: center; pointer-events: none; width: max-content; max-width: calc(100% - 24px); }
+.toast {
+  pointer-events: auto; display: flex; align-items: center; gap: 12px;
+  background: #24262E; color: #fff; border-radius: 12px; padding: 9px 12px 9px 14px; font-size: 13px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25); animation: toastIn .18s ease-out;
+}
+.toast .toast-ico { color: #7EE2A8; display: inline-flex; }
+.toast .toast-ico svg { width: 16px; height: 16px; }
+.toast button { border: 0; background: rgba(255,255,255,.14); color: #fff; border-radius: 8px; padding: 4px 10px; font-weight: 600; font-size: 12.5px; }
+.toast button:hover { background: rgba(255,255,255,.24); }
+.toast.leaving { opacity: 0; transform: translateY(6px); transition: all .2s ease; }
+@keyframes toastIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+select, input[type="number"], input[type="text"], input[type="search"], input[type="email"] {
+  border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 4px 8px; font-size: 13px; color: var(--ink);
+}
+select:focus, input:focus { outline: 2px solid rgba(30, 79, 140, .35); outline-offset: 0; border-color: var(--navy); }
+/* Slider: blue on the left of the knob, see-through light blue on the right (range-fill.js keeps --fill) */
+input[type="range"] {
+  -webkit-appearance: none; appearance: none; height: 18px; background: transparent; cursor: pointer; margin: 0; padding: 0;
+  accent-color: var(--accent); --fill: 0%;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px; border-radius: 999px;
+  background: linear-gradient(to right, var(--accent) 0 var(--fill), var(--accent-track) var(--fill) 100%);
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; width: 16px; height: 16px; margin-top: -5px; border-radius: 50%;
+  background: var(--accent); border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+}
+input[type="range"]:hover::-webkit-slider-thumb { background: var(--accent-dark); }
+input[type="range"]:focus-visible { outline: 2px solid rgba(30, 79, 140, .45); outline-offset: 2px; border-radius: 6px; }
+
+:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+
+/* Quick tooltips (tooltip.js) */
+.tooltip {
+  position: fixed; z-index: 1000; max-width: min(260px, calc(100vw - 12px)); padding: 7px 10px; border-radius: 9px;
+  background: #24262E; color: #fff; font-size: 12px; line-height: 1.4; box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  pointer-events: none; opacity: 0; transform: translateY(2px); transition: opacity .12s ease, transform .12s ease; font-weight: 400;
+}
+.tooltip.visible { opacity: 1; transform: none; }
+
+/* Keyboard keys */
+.kbd {
+  display: inline-block; min-width: 22px; padding: 0 7px; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px;
+  background: #FAFAFC; font-size: 12.5px; text-align: center; line-height: 22px; white-space: nowrap; color: var(--ink); font-weight: 500;
+}
+.kbd-plus { margin: 0 3px; color: var(--muted); font-size: 12px; }
+
+/* Yellow of the new icon */
+:root { --sun: #FFD84D; --sun-soft: #FFF6C9; }

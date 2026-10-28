@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="utf-8">
+  <!-- The page is already translated (English / Russian): Chrome must not machine-translate it -->
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desktop Sticky Notes Installed</title>
+  <link rel="icon" href="icons/icon32.png">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/welcome.css">
+</head>
+<!-- One page, two modes. data-mode on <body> decides what is visible:
+     "pin"   — the icon is hidden under the puzzle menu: the page starts with how to pin it (default, also without JS);
+     "usage" — the icon is already on the toolbar: the pin step is hidden, the page starts with how to use it.
+     Every step is one block: a heading, then a picture under it. Blocks go one under another.
+     The same files work inside the extension (welcome.html) and on the website (index.html). -->
+<body data-mode="pin">
+  <div class="topbar">
+    <div class="seg" id="osSwitch" role="tablist">
+      <button data-os="win" role="tab">Windows</button>
+      <button data-os="mac" role="tab">Mac</button>
+    </div>
+    <div class="seg small" id="langSwitch">
+      <button data-lang="en">EN</button>
+      <button data-lang="ru">RU</button>
+      <button data-lang="es">ES</button>
+      <button data-lang="fr">FR</button>
+      <button data-lang="de">DE</button>
+    </div>
+  </div>
+
+  <main class="page">
+    <header class="intro">
+      <h1 data-w="installed">Desktop Sticky Notes Installed</h1>
+      <p class="thank-you" data-w="thankYou">Thank You!</p>
+    </header>
+
+    <!-- ===== Pin step: only when the icon is hidden under the puzzle ===== -->
+    <section class="step mode mode-pin" id="pin">
+      <h2 class="step-title" data-w="pinLead">Click the puzzle piece (1) in the top right of your browser. Then, click the little pin (2) next to the extension:</h2>
+      <figure class="pic pic-chrome" data-pic="pin"></figure>
+      <p class="pic-note" data-w="picNote"></p>
+      <p class="live" id="liveHint" hidden><span class="live-dot"></span><span data-w="liveHint">This page will update automatically as soon as you pin the icon.</span></p>
+      <p class="mode-switch"><span data-w="toUsageQ">Already pinned?</span> <a href="#usage" data-switch="usage" data-w="toUsage">Skip this step</a></p>
+    </section>
+
+    <!-- Shown instead of the pin step when the icon is already on the toolbar -->
+    <section class="step mode mode-usage" id="pinnedNote">
+      <p class="pinned-line" data-w="pinnedLine">Desktop Sticky Notes is already pinned to your toolbar.</p>
+      <p class="mode-switch"><span data-w="toPinQ">Don’t see the icon on your toolbar?</span> <a href="#pin" data-switch="pin" data-w="toPin">Show me how to pin it</a></p>
+    </section>
+
+    <!-- ===== How to use: the same for both modes ===== -->
+    <section class="step" id="open">
+      <h2 class="step-title" data-w="openLead">Open the extension (3) to start using Desktop Sticky Notes:</h2>
+      <figure class="pic pic-chrome" data-pic="open"></figure>
+      <p class="pic-note" data-w="picNote"></p>
+    </section>
+
+    <section class="step" id="newNote">
+      <h2 class="step-title" data-w="newLead">Click + New note (4). A new note opens in its own window:</h2>
+      <figure class="pic pic-chrome" data-pic="note"></figure>
+    </section>
+
+    <section class="step" id="typing">
+      <h2 class="step-title" data-w="typeH">Just start typing</h2>
+      <p class="step-text" data-w="typeB">There is no Save button: everything is saved automatically. The first line becomes the title.</p>
+      <figure class="pic pic-shot"><img data-shot="note" alt=""></figure>
+    </section>
+
+    <section class="step" id="onTop">
+      <h2 class="step-title" data-w="topH">Keep it on top</h2>
+      <p class="step-text" data-w="topB">Click Always on top, and the note stays above Word, Excel, and any other app.</p>
+      <figure class="pic pic-shot"><img data-shot="ontop" alt=""></figure>
+    </section>
+
+    <section class="step" id="find">
+      <h2 class="step-title" data-w="findH">Find any note</h2>
+      <p class="step-text" data-w="findB">Open All notes &amp; folders to search, sort, and organize your notes into folders.</p>
+      <figure class="pic pic-shot"><img data-shot="library" alt=""></figure>
+    </section>
+
+    <section class="step" id="keys">
+      <h2 class="step-title" data-w="keysTitle">Keyboard shortcuts on this computer</h2>
+      <div class="pic pic-table">
+        <table class="keys" id="keysTable"></table>
+        <p class="tip"><span data-w="keysTip">You can change the shortcuts on this Chrome page:</span> <button class="link-btn" id="changeKeys">chrome://extensions/shortcuts</button></p>
+      </div>
+    </section>
+
+    <section class="step" id="tips">
+      <h2 class="step-title" data-w="tipsTitle">Good to know</h2>
+      <div class="pic pic-table tips">
+        <div class="tip-row"><span class="tip-ico">✓</span><span data-w="tipSpell"></span></div>
+        <div class="tip-row"><span class="tip-ico">🖥️</span><span data-w="tipDesktop"></span></div>
+      </div>
+    </section>
+
+    <!-- The button is at the very end of the page: the user reads the whole guide first (build 16) -->
+    <section class="step step-cta" id="startNow">
+      <div class="cta" id="cta" hidden>
+        <button class="primary-btn big" id="firstNote"><span>+</span> <span data-w="firstNote">Create your first note</span></button>
+        <p class="kbd-line" data-w="pressToCreate">Or press Alt + Shift + N to create a note.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast-pinned" id="pinnedToast" role="status" hidden></div>
+  <!-- Fireworks right after the extension is installed -->
+  <canvas class="fireworks" id="fireworks" aria-hidden="true" hidden></canvas>
+  <script src="js/welcome.js"></script>
+</body>
+</html>
