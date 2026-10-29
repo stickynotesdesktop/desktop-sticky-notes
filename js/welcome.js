@@ -177,7 +177,7 @@
       topH: 'Immer im Blick',
       topB: 'Klicke auf <b>Immer im Vordergrund</b>, und die Notiz bleibt über Word, Excel und jeder anderen App.',
       findH: 'Jede Notiz wiederfinden',
-      findB: 'Öffne <b>Alle Notizen & Ordner</b>, um deine Notizen zu suchen, zu sortieren und in Ordnern zu sortieren.',
+      findB: 'Öffne <b>Alle Notizen & Ordner</b>, um deine Notizen zu suchen, zu sortieren und in Ordnern zu ordnen.',
       keysTitle: 'Tastenkürzel auf diesem Computer',
       kNew: 'Neue Notiz (wenn Chrome aktiv ist)',
       kAny: 'Neue Notiz aus jeder App (Chrome muss laufen)',
@@ -203,9 +203,8 @@
   };
   // Russian is not offered on the Welcome page (build 18): a Russian browser gets the English page
   var LANGS = ['en', 'es', 'fr', 'de'];
-  // Pictures of the real extension: the menu and the list are made for every language,
-  // the note windows in English and Russian (the other languages use the English ones).
-  var SHOT_LANGS = { popup: LANGS, library: LANGS, note: ['en'], ontop: ['en'], 'note-empty': ['en'] };
+  // Pictures of the real extension in every language of the page (build 20: the note windows too)
+  var SHOT_LANGS = { popup: LANGS, library: LANGS, note: LANGS, ontop: LANGS, 'note-empty': LANGS };
 
   // Default shortcuts (the same as in manifest.json). The extension sends the real ones if it is reachable.
   var shortcuts = { newNote: 'Alt+Shift+N', newNoteAnywhere: 'Ctrl+Shift+9', openMenu: 'Alt+Shift+S' };
